@@ -1,0 +1,81 @@
+/* Colors
+#0c2233
+#9dd3dd
+#ffc045 
+*/
+/* macro css declarations */
+body {
+    background-color:#0c2233;
+    color:#9dd3dd;
+    min-height:100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+h1,h3 {
+    color:#ffff;
+}
+h1 {
+    font-size:42px;
+}
+section {
+    margin:0 15%;
+}
+.orange-text {
+    color:#ffc045;
+}
+.across {
+    border-bottom: 1px solid #ffc045;
+}
+/* header grid area */
+header {
+    display:grid;
+    grid-template-columns: 4fr 8fr;
+}
+header figure img {
+    height:60px;
+}
+header nav ul {
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 15px;
+}
+header nav li {
+    color:#ffc045;
+    list-style: none;
+}
+header nav a {
+    color:#9dd3dd;
+    text-decoration-line: none;
+    padding-left:10px;
+}
+header nav a:hover {
+    color:#ffc045;
+}
+/* intro grid section */
+#intro-grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "intro photo"
+    "about about";
+}
+#intro {
+    grid-area: intro;
+}
+#intro h2 {
+    border-bottom: 1px solid #ffc045;
+}
+#photo-of-me {
+    grid-area: photo;
+    border-left: solid 1px #ffc045;
+}
+#photo-of-me img {
+    float:right;
+}
+#about {
+    grid-area: about;
+}
+#about ul {
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+}
