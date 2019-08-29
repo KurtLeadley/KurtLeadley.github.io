@@ -19,7 +19,7 @@
                 <ul>
                     <li>01.<a href="#about">About</a></li>
                     <li>02.<a href="#work-experience">Experience</a></li>
-                    <li>03.<a href="#project-thumbnails">Projects</a></li>
+                    <li>03.<a href="#project-grid">Projects</a></li>
                     <li>04.<a href="#contact-me">Contact</a></li>
                 </ul>
             </nav>
@@ -64,45 +64,129 @@
                 </div>
             </section>
             <div class="across"></div>
-            <section>
-                <div id="work-experience">
-                    <h3>Experience:</h3>
+            <section id='work-experience'>
+                <h3 id='work-experience-header'>Work and Education Experience:</h3>
+                <div id="work-experience-list">
+                    <ul>
+                        <li id='1' class='orange-text'>ADG Communications</li>
+                        <li id='2'>GlobalFoundries</li>
+                        <li id='3'>Bellevue University</li>
+                        <li id='4'>HVCC Internship</li>
+                        <li id='5'>Hudson Valley Commuity College</li>
+                    </ul>
+                </div>
+                <div id="work-experience-1">
+                    <h4>Web and Database Developer @ ADG Communications</h4>
+                    <p><i>February 2019 - Present</i></p>
+                    <p class="white-text">Collaborates with small team of developers to produce high quality,
+                        beautiful and compliant websites. 
+                    </p>
+                    <ul>
+                        <li>Leverage Joomla with in house, custom templates for design</li>
+                        <li>Custom JavaScript to Joomla to enhance and extend functionality</li>
+                        <li>Develop other custom modules and extensions with PHP & JS to really 
+                            customize our builds for the client.
+                        </li>
+                    </ul>
+                    <p class='white-text'>Administers and develops databases for ADG's clients</p>
+                    <ul>
+                        <li>CiviCRM administration</li>
+                        <li>PHPMyAdmin administration</li>
+                        <li>Server side programming to extend CiviCRM's capabilities</li>
+                    </ul>
+                </div>
+                <div id="work-experience-2">
+                    <h4>Automation Programmer @ GlobalFoundries</h4>
+                    <p><i>September 2015 - November 2018</i></p>
+                    <p class='white-text'>Automated daily tasks for a team of engineers with Google Apps Script</p>
+                    <ul>
+                        <li>GMail, Google Drive, Google Sheets, Google Docs, Google Calendar integration and automation code</li>
+                        <li>Helped reduce bugs caused by manual input and increased productivity of Design Manual team</li>
+                    </ul>
+                    <p class='white-text'>Word to DITA document conversion automation</p>
+                    <ul>
+                        <li>Leveraged the DITA Open Toolkit open source project to help convert Word documents to 
+                            to well formed, specifically marked and structured DITA
+                        </li>
+                        <li>Custom XSLT and XML code for mapping and importing converted DITA documents into internal,
+                            web based technical writing software.
+                        </li>
+                    </ul>
+                </div>
+                <div id="work-experience-3">
+                        <h4>Bachelor's @ Bellevue</h4>
+                        <p><i>March 2019 - Present</i></p>
+                        <p class='white-text'>Currently working to earn a Bachelor's Degree in
+                            Web Development at Bellevue University. The expected graduation date
+                            is August 2020. The Curriculum includes:
+                        </p>
+                        <ul>
+                            <li>Vanilla JavaScript and JQuery</li>
+                            <li>Node JS</li>
+                            <li>Mongo DB</li>
+                            <li>Angular</li>
+                            <li>Express</li>
+                            <li>AKA the MEAN Stack</li>
+                        </ul>
+                    </div>
+                <div id="work-experience-4">
+                    <h4>Internship @ HVCC</h4>
+                    <p><i>January 2015 - August 2015</i></p>
+                    <p class="white-text">Interned full time my last semester at Hudson Valley Community College for the
+                        ITS department.
+                    </p>
+                    <ul>
+                        <li>Wrote a backend administration tool for tracking library books and media</li>
+                        <li>Application was written using PHP,MySQL,AJAX,HTML,CSS on an Apache server</li>
+                        <li>Some features include, adding, modifying and deleting books or media. 
+                            Advanced search capabilities could filter results by many categories 
+                            (Think shopping on Amazon)
+                        </li>
+                    </ul>
+                </div>
+                <div id="work-experience-5">
+                    <h4>Hudson Valley Community College Degree</h4>
+                    <p><i>September 2012 - May 2015</i></p>
+                    <p class='white-text'>Associates in Applied Science, Web Design and WWW Programming</p>
+                    <ul>
+                        <li>Hudson Valley Community College, Troy, NY from Fall 2012 – Spring 2015, GPA 3.9</li>
+                        <li>President’s List (Fall 2012, Spring 2013, Spring 2014, Fall 2014)</li>
+                        <li>Awarded "Outstanding Achievement in Computer Information Systems: Web Design" May 2015</li>
+                    </ul>
                 </div>
             </section>
-            <section>
-                <div id="left-arrow">
+            <div id="left-arrow">
 
-                </div>
-                <div id="project-thumbnails">
-                    <div id="thumbnail-1">
-                        <figure>
-                            <img src="" alt="">
-                            <figcaption></figcaption>
-                        </figure>
-                    </div>
-                    <div id="thumbnail-2">
-                        <figure>
-                            <img src="" alt="">
-                            <figcaption></figcaption>
-                        </figure>
-                    </div>
-                    <div id="thumbnail-3">
-                        <figure>
-                            <img src="" alt="">
-                            <figcaption></figcaption>
-                        </figure>
-                    </div>
-                </div>
-                <div id="right-arrow">
-
-                </div>
+            </div>
+            <section id='project-grid'>
+                <h3 id='project-thumbnails-header'>Personal Projects:</h3>
+                <div id="thumbnail-1" class='thumb-text'></div>
+                <div id="thumbnail-2" class='thumb-text'></div>
+                <div id="thumbnail-3" class='thumb-text'></div>
             </section>
-            <section>
-                <div id="contact-me">
+            <div id="right-arrow">
 
-                </div>
-            </section>
+            </div>
+            <div class="across" id="clear-thumbs"></div>
         </main>
-        <footer></footer>
+        <footer id="contact-me">
+            <div id="footer-left">
+                <h3>Contact Me:</h3>
+                <p>Feel free to drop me a message @ one of these emails</p>
+                <p class='orange-text'>leadleyk@adgcommunications.com</p>
+                <p class='orange-text'>kleadley@my365.bellevue.edu</p>
+            </div>
+            <div id="footer-middle">
+                <h3>Links:</h3>
+                <p>GitHub</p>
+                <p>ADG Communications</p>
+                <p>SJST Tank</p>
+            </div>
+            <div id="footer-right">
+                <figure>
+                    <img src="images/logo-3.png" alt="Kurt Leadley Logo">
+                </figure>
+            </div>
+        </footer>
     </body>
 </html>
