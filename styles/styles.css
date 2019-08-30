@@ -152,16 +152,19 @@ header nav a:hover {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 30px;
+    grid-row-gap: 30px;
     grid-template-areas:  
     "title title title"
-    "thumb1 thumb2 thumb3";
+    "thumb1 thumb2 thumb3"
+    "thumb4 thumb5 thumb6";
     border-top: 1px solid #ffc045;
     border-right: 1px solid #ffc045;
 }
 #project-thumbnails-header {
     grid-area: title;
 }
-#thumbnail-1, #thumbnail-2, #thumbnail-3 {
+#thumbnail-1, #thumbnail-2, #thumbnail-3,
+#thumbnail-4, #thumbnail-5, #thumbnail-6{
     background-repeat: no-repeat; 
     border: 1px solid #ffc045;
     height:376px;
@@ -183,6 +186,21 @@ header nav a:hover {
     background-image: url(../images/dinah-cat.jpg);
     margin:0 15px 0 7.5px;
 }
+#thumbnail-4 {
+    grid-area: thumb4;
+    background-image: url(../images/jscode.jpg);
+    margin:0 7.5px 0 15px;
+}
+#thumbnail-5 {
+    grid-area: thumb5;
+    background-image: url(../images/football-xs-and-os.jpg);
+    margin:0 7.5px;
+}
+#thumbnail-6 {
+    grid-area: thumb6;
+    background-image: url(../images/portfolio-proto.jpg);
+    margin:0 15px 0 7.5px;
+}
 .thumb-text {
     text-align: center;
     color: #9dd3dd;
@@ -190,6 +208,16 @@ header nav a:hover {
     top:50%;
     padding:5px 0;
     border:1px solid #ffc045;
+}
+#project-grid div a {
+    text-align: center;
+    color:#ffc045;
+    text-decoration-line: none;
+    padding:5px 0;
+}
+#project-grid div a:hover {
+    text-align: center;
+    color:#9dd3dd;
 }
 /* Contact Me area */
 #clear-thumbs {
@@ -208,4 +236,12 @@ header nav a:hover {
 }
 #footer-right {
     justify-self: right;
+}
+#contact-me a {
+    color:#ffc045;
+    text-decoration-line: none;
+    padding:5px 0;
+}
+#contact-me a:hover {
+    color:#ffff;
 }
