@@ -41,12 +41,15 @@ section {
     border-bottom: 1px solid #ffc045;
 }
 /* header grid area */
-header {
+header nav {
     display:grid;
     grid-template-columns: 4fr 8fr;
 }
 header figure img {
     height:60px;
+}
+#burger-menu {
+    display:none;
 }
 header nav ul {
     display:grid;
@@ -232,7 +235,7 @@ header nav a:hover {
 }
 #footer-middle {
     justify-self: center;
-    border-right: 1px solid #ffc045
+    border-right: 1px solid #ffc045;
 }
 #footer-right {
     justify-self: right;
@@ -246,3 +249,115 @@ header nav a:hover {
     color:#ffff;
 }
 
+@media (max-width: 767px) {
+    section {
+        margin:0%;
+    }
+    header figure {
+        margin-left:0;
+    }
+    header {
+        display:unset;
+    }
+    #intro-grid {
+        grid-template-columns: 1fr; 
+        grid-template-areas:  
+        "intro"
+        "photo"
+        "about";
+    }
+    #photo-of-me {
+        justify-self: center;
+        border-left:none;
+    }
+    #about ul {
+        grid-template-columns: 1fr 1fr;
+    }
+    #work-experience {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "title"
+        "list"
+        "exp1"
+        "exp2"
+        "exp3"
+        "exp4"
+        "exp5";
+    }
+    #project-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "title"
+        "thumb1"
+        "thumb2"
+        "thumb3"
+        "thumb4"
+        "thumb5"
+        "thumb6";
+    }
+    #project-grid div {
+        margin:0 15px;
+    }
+    #contact-me {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "left left"
+        "middle right";
+    }
+    #footer-left {
+        grid-area:left
+    }
+    #footer-middle {
+        grid-area: middle;
+    }
+    #footer-right {
+        grid-area: right;
+    }
+    /* 
+    Style the navigation menu 
+    https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+    */
+    #burger-menu {
+        display:block;
+    }
+    .topnav {
+        display:block;
+        overflow: hidden;
+        background-color: #0c2233;
+        position: relative;
+    }
+    
+    /* Hide the links inside the navigation menu (except for logo/home) */
+    .topnav #myLinks {
+        display: none;
+    }
+    
+    /* Style navigation menu links */
+    .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+    
+    /* Style the hamburger menu */
+    .topnav a.icon {
+        background: #0c2233;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    
+    /* Add a grey background color on mouse-over */
+    .topnav a:hover {
+        background-color: #0c2233;
+        color: #ffc045;
+    }
+    
+    /* Style the active link (or home/logo) */
+    .active {
+        color: white;
+    }
+}

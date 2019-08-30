@@ -4,24 +4,31 @@
         <meta charset="utf-8">
         <meta name="description" content="Kurt Leadley, Web Developer">
         <meta name="author" content="Kurt Leadley">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Kurt Leadley | Web Developer</title>
         <link rel="stylesheet" href="styles/styles.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="scripts/script.js"></script>
     </head>
     <body>
         <header>
-            <figure>
-                <img src="images/logo-3.png" alt="Kurt Leadley Logo">
-            </figure>
-            <nav>
-                <ul>
+            <nav class="topnav">
+                <figure>
+                    <img src="images/logo-3.png" alt="Kurt Leadley Logo">
+                </figure>
+                <!-- Navigation links (hidden by default on mobile) -->
+                <ul id="myLinks">
                     <li>01.<a href="#about">About</a></li>
                     <li>02.<a href="#work-experience">Experience</a></li>
                     <li>03.<a href="#project-grid">Projects</a></li>
                     <li>04.<a href="#contact-me">Contact</a></li>
                 </ul>
+                <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                <a id='burger-menu' href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
             </nav>
         </header>
         <main>
@@ -52,10 +59,10 @@
                         <li>CSS3</li>
                         <li>Joomla</li>
                         <li>CiviCRM</li>
-                        <li>Google Apps Script</li>
                         <li>XML</li>
                         <li>XSLT</li>
-                        <li>Apache</li>                      
+                        <li>Apache</li>
+                        <li>Google Apps Script</li>                     
                     </ul>
                     <p> When I am not working, I like to play hockey, hike and bike. I enjoy watching football and hockey
                         with the wife and cat as well. When I have a chance to get out of town, I like to go up to the Adirondack Mountains
@@ -155,9 +162,9 @@
                     </ul>
                 </div>
             </section>
-            <div id="left-arrow">
-                <!-- <p>Left arrow: <i class="arrow right"></i></p> -->
-            </div>
+            <!-- <div id="left-arrow">
+                <p>Left arrow: <i class="arrow right"></i></p>
+            </div> -->
             <section id='project-grid'>
                 <h3 id='project-thumbnails-header'>Personal Projects:</h3>
                 <div id="thumbnail-1" class='thumb-text'></div>
@@ -167,9 +174,9 @@
                 <div id="thumbnail-5" class='thumb-text'></div>
                 <div id="thumbnail-6" class='thumb-text'></div>
             </section>
-            <div id="right-arrow">
-                <!-- <p>Right arrow: <i class="arrow right"></i></p> -->
-            </div>
+            <!-- <div id="right-arrow">
+                <p>Right arrow: <i class="arrow right"></i></p>
+            </div> -->
             <div class="across" id="clear-thumbs"></div>
         </main>
         <footer id="contact-me">
@@ -177,7 +184,7 @@
                 <h3>Contact Me:</h3>
                 <p>Feel free to drop me a message @ one of these emails</p>
                 <p class='orange-text'><a href='mailto:leadleyk@adgcommunications.com'>leadleyk@adgcommunications.com</a></p>
-                <p class='orange-text'><a href='mailto:kleadley@my365.bellevue.edu'>mailto:kleadley@my365.bellevue.edu</a></p>
+                <p class='orange-text'><a href='mailto:kleadley@my365.bellevue.edu'>kleadley@my365.bellevue.edu</a></p>
             </div>
             <div id="footer-middle">
                 <h3>Links:</h3>
