@@ -198,7 +198,7 @@ header nav a:hover {
 }
 #thumbnail-6 {
     grid-area: thumb6;
-    background-image: url(../images/portfolio-proto.jpg);
+    background-image: url(../images/portfolio-proto.JPG);
     margin:0 15px 0 7.5px;
 }
 .thumb-text {

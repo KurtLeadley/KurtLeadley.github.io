@@ -53,7 +53,7 @@ $(function() {
             title:'Portfolio Prototype',
             desc:'Prototype for this portfolio site',
             link:'images/leadley-assignment-2.4-wireframe.pdf',
-            image:'images/portfolio-proto.jpg'
+            image:'images/portfolio-proto.JPG'
         }
     }
     $('#project-grid div').hover(function(e){
