@@ -56,11 +56,10 @@ $(function() {
             image:'images/portfolio-proto.JPG'
         }
     }
-    $('#project-grid div').hover(function(e){
-        var id = $(this).attr('id');
+    $('#project-grid > div').hover(function(){
+        var id = $(this).children('div').attr('id');
         var image = thumbObject[id].image;
         var imageLink = "url("+image+")";
-        $(this).css("background-image",imageLink);
         $('#'+id).append("<p class='thumb-text'><a href='"+thumbObject[id].link+"'>"+thumbObject[id].title+"</a></p>");
         $('#'+id).append("<p class='thumb-text'><a href='"+thumbObject[id].link+"'>"+thumbObject[id].desc+"</a></p>");
     },
@@ -72,51 +71,63 @@ $(function() {
         $('#thumbnail-5').html('');
         $('#thumbnail-6').html('');           
     });
-    // $('#right-arrow p').click(function(e){
-    //     e.preventDefault();
-    //     console.log('clicked');
-    //     var leftThumb = $('#project-grid div:nth-of-type(1)').attr('id');
-    //     var middleThumb = $('#project-grid div:nth-of-type(2)').attr('id');
-    //     var rightThumb = $('#project-grid div:nth-of-type(3)').attr('id');
-    //     var parsedLeftThumb = leftThumb.split('-');
-    //     var parsedMiddleThumb = middleThumb.split('-');
-    //     var parsedRightThumb = rightThumb.split('-');
-    //     var newIdLeft = parseInt(parsedLeftThumb[1])+1;
-    //     var newIdMiddle = parseInt(parsedMiddleThumb[1])+1;
-    //     var newIdRight = parseInt(parsedRightThumb[1])+1;
-    //     if (newIdLeft > 6 ) {
-    //         newIdLeft = 1;
-    //     }
-    //     if (newIdMiddle > 6 ) {
-    //         newIdMiddle = 1;
-    //     }
-    //     if (newIdRight > 6 ) {
-    //         newIdRight = 1;
-    //     }
-    //     console.log(newIdLeft)
-    //     console.log(newIdMiddle)
-    //     console.log(newIdRight)
-    //     var newSelectorLeft = parsedLeftThumb[0]+'-'+newIdLeft;
-    //     var newSelectorMiddle = parsedMiddleThumb[0]+'-'+newIdMiddle;
-    //     var newSelectorRight = parsedRightThumb[0]+'-'+newIdRight;
-    //     $('#project-grid div:nth-of-type(1)').attr('id',newSelectorLeft);
-    //     $('#project-grid div:nth-of-type(2)').attr('id',newSelectorMiddle);
-    //     $('#project-grid div:nth-of-type(3)').attr('id',newSelectorRight);
-    //     // changeImageProperties(newSelectorLeft);
-    //     // changeImageProperties(newSelectorMiddle);
-    //     // changeImageProperties(newSelectorRight);
-    // });
-    // function changeImageProperties(divId) {
-    //     var id = '#'+divId;
-    //     console.log(id);
-    //     var image = thumbObject[divId].image;
-    //     var imageLink = "url("+image+")";
-    //     $(id).css("background-image",imageLink);
-    //     $(id).append("<p class='thumb-text'><a href='"+thumbObject[divId].link+"'>"+thumbObject[divId].title+"</a></p>");
-    //     $(id).append("<p class='thumb-text'><a href='"+thumbObject[divId].link+"'>"+thumbObject[divId].desc+"</a></p>");
-    // }
-    /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+
+    $('#left-arrow').click(function(){
+        var leftThumb = $('#project-grid div:nth-of-type(1) div').attr('id');
+        var middleThumb = $('#project-grid div:nth-of-type(2) div').attr('id');
+        var rightThumb = $('#project-grid div:nth-of-type(3) div').attr('id');
+        var parsedLeftThumb = leftThumb.split('-');
+        var parsedMiddleThumb = middleThumb.split('-');
+        var parsedRightThumb = rightThumb.split('-');
+        var newIdLeft = parseInt(parsedLeftThumb[1])-1;
+        var newIdMiddle = parseInt(parsedMiddleThumb[1])-1;
+        var newIdRight = parseInt(parsedRightThumb[1])-1;
+        if (newIdLeft == 0 ) {
+            newIdLeft = 6;
+        }
+        if (newIdMiddle == 0 ) {
+            newIdMiddle = 6;
+        }
+        if (newIdRight == 0 ) {
+            newIdRight = 6;
+        }
+        var newSelectorLeft = parsedLeftThumb[0]+'-'+newIdLeft;
+        var newSelectorMiddle = parsedMiddleThumb[0]+'-'+newIdMiddle;
+        var newSelectorRight = parsedRightThumb[0]+'-'+newIdRight;
+        $('#project-grid div:nth-of-type(1) div').attr('id',newSelectorLeft);
+        $('#project-grid div:nth-of-type(2) div').attr('id',newSelectorMiddle);
+        $('#project-grid div:nth-of-type(3) div').attr('id',newSelectorRight);
+    });
+
+    $('#right-arrow').click(function(){
+        var leftThumb = $('#project-grid div:nth-of-type(1) div').attr('id');
+        var middleThumb = $('#project-grid div:nth-of-type(2) div').attr('id');
+        var rightThumb = $('#project-grid div:nth-of-type(3) div').attr('id');
+        var parsedLeftThumb = leftThumb.split('-');
+        var parsedMiddleThumb = middleThumb.split('-');
+        var parsedRightThumb = rightThumb.split('-');
+        var newIdLeft = parseInt(parsedLeftThumb[1])+1;
+        var newIdMiddle = parseInt(parsedMiddleThumb[1])+1;
+        var newIdRight = parseInt(parsedRightThumb[1])+1;
+        if (newIdLeft == 7 ) {
+            newIdLeft = 1;
+        }
+        if (newIdMiddle == 7 ) {
+            newIdMiddle = 1;
+        }
+        if (newIdRight == 7 ) {
+            newIdRight = 1;
+        }
+        console.log(newIdRight);
+        var newSelectorLeft = parsedLeftThumb[0]+'-'+newIdLeft;
+        var newSelectorMiddle = parsedMiddleThumb[0]+'-'+newIdMiddle;
+        var newSelectorRight = parsedRightThumb[0]+'-'+newIdRight;
+        $('#project-grid div:nth-of-type(1) div').attr('id',newSelectorLeft);
+        $('#project-grid div:nth-of-type(2) div').attr('id',newSelectorMiddle);
+        $('#project-grid div:nth-of-type(3) div').attr('id',newSelectorRight);
+    });
 });
+//Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 // mobile nav taken from
 // https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
 function myFunction() {

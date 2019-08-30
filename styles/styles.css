@@ -151,6 +151,17 @@ header nav a:hover {
 }
 
 /* Projects Area */
+#slider {
+    display:grid;
+    grid-template-columns: 1fr 8fr 1fr;
+}
+#right-arrow, #left-arrow {
+    align-self: center;
+    justify-self: center;
+}
+#left-arrow img, #right-arrow img {
+    height:40px;
+}
 #project-grid {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -158,13 +169,24 @@ header nav a:hover {
     grid-row-gap: 30px;
     grid-template-areas:  
     "title title title"
-    "thumb1 thumb2 thumb3"
-    "thumb4 thumb5 thumb6";
+    "img-left img-middle img-right";
     border-top: 1px solid #ffc045;
     border-right: 1px solid #ffc045;
 }
 #project-thumbnails-header {
     grid-area: title;
+}
+#thumb-container-left {
+    grid-area:img-left;
+    margin:0 7.5px 0 15px;
+}
+#thumb-container-middle {
+    grid-area:img-middle;
+    margin:0 7.5px;
+}
+#thumb-container-right {
+    grid-area:img-right;
+    margin:0 15px 0 7.5px;
 }
 #thumbnail-1, #thumbnail-2, #thumbnail-3,
 #thumbnail-4, #thumbnail-5, #thumbnail-6{
@@ -175,34 +197,22 @@ header nav a:hover {
     box-shadow: inset 0 0 0 1000px rgba(157, 211, 221,.25);
 }
 #thumbnail-1 {
-    grid-area: thumb1;
-    background-image: url(../images/snowy-mtn-summer.png);
-    margin:0 7.5px 0 15px;
+    background-image: url(../images/snowy-mtn-summer.png);  
 }
 #thumbnail-2 {
-    grid-area: thumb2;
     background-image: url(../images/sjst-logo.png);
-    margin:0 7.5px;
 }
 #thumbnail-3 {
-    grid-area: thumb3;
     background-image: url(../images/dinah-cat.jpg);
-    margin:0 15px 0 7.5px;
 }
 #thumbnail-4 {
-    grid-area: thumb4;
     background-image: url(../images/jscode.jpg);
-    margin:0 7.5px 0 15px;
 }
 #thumbnail-5 {
-    grid-area: thumb5;
     background-image: url(../images/football-xs-and-os.jpg);
-    margin:0 7.5px;
 }
 #thumbnail-6 {
-    grid-area: thumb6;
     background-image: url(../images/portfolio-proto.JPG);
-    margin:0 15px 0 7.5px;
 }
 .thumb-text {
     text-align: center;
@@ -288,12 +298,9 @@ header nav a:hover {
         grid-template-columns: 1fr;
         grid-template-areas: 
         "title"
-        "thumb1"
-        "thumb2"
-        "thumb3"
-        "thumb4"
-        "thumb5"
-        "thumb6";
+        "img-left"
+        "img-middle"
+        "img-right";
     }
     #project-grid div {
         margin:0 15px;
