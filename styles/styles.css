@@ -251,10 +251,10 @@ header nav a:hover {
 
 @media (max-width: 767px) {
     section {
-        margin:0%;
+        margin:0 2%;
     }
     header figure {
-        margin-left:0;
+        margin-left:2%;
     }
     header {
         display:unset;
@@ -325,6 +325,7 @@ header nav a:hover {
         overflow: hidden;
         background-color: #0c2233;
         position: relative;
+        margin: 0 2%;
     }
     
     /* Hide the links inside the navigation menu (except for logo/home) */
@@ -334,8 +335,8 @@ header nav a:hover {
     
     /* Style navigation menu links */
     .topnav a {
-        color: white;
-        padding: 14px 16px;
+        color:#fff;
+        padding: 10px 16px;
         text-decoration: none;
         font-size: 17px;
         display: block;
