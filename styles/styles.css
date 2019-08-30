@@ -299,19 +299,29 @@ header nav a:hover {
         margin:0 15px;
     }
     #contact-me {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 15px;
         grid-template-areas: 
-        "left left"
-        "middle right";
+        "left left left"
+        "middle right right";
+    }
+    #contact-me {
+        margin: 0 2%;
     }
     #footer-left {
-        grid-area:left
+        grid-area:left;
     }
     #footer-middle {
         grid-area: middle;
     }
     #footer-right {
         grid-area: right;
+    }
+    footer img {
+        width:98%;
+    }
+    .small {
+        font-size: 10pt;
     }
     /* 
     Style the navigation menu 
