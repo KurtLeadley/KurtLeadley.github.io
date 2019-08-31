@@ -76,21 +76,30 @@ $(function() {
         var leftThumb = $('#project-grid div:nth-of-type(1) div').attr('id');
         var middleThumb = $('#project-grid div:nth-of-type(2) div').attr('id');
         var rightThumb = $('#project-grid div:nth-of-type(3) div').attr('id');
-        var parsedLeftThumb = leftThumb.split('-');
-        var parsedMiddleThumb = middleThumb.split('-');
-        var parsedRightThumb = rightThumb.split('-');
-        var newIdLeft = parseInt(parsedLeftThumb[1])-1;
-        var newIdMiddle = parseInt(parsedMiddleThumb[1])-1;
-        var newIdRight = parseInt(parsedRightThumb[1])-1;
-        if (newIdLeft == 0 ) {
-            newIdLeft = 6;
+        
+        if (leftThumb) {
+            var parsedLeftThumb = leftThumb.split('-');
+            var newIdLeft = parseInt(parsedLeftThumb[1])-1;
+            if (newIdLeft == 0 ) {
+                newIdLeft = 6;
+            }
         }
-        if (newIdMiddle == 0 ) {
-            newIdMiddle = 6;
+
+        if (middleThumb) {
+            var parsedMiddleThumb = middleThumb.split('-');
+            var newIdMiddle = parseInt(parsedMiddleThumb[1])-1;
+            if (newIdMiddle == 0 ) {
+                newIdMiddle = 6;
+            }
         }
-        if (newIdRight == 0 ) {
-            newIdRight = 6;
+        if (rightThumb) {
+            var parsedRightThumb = rightThumb.split('-');
+            var newIdRight = parseInt(parsedRightThumb[1])-1;
+            if (newIdRight == 0 ) {
+                newIdRight = 6;
+            }
         }
+
         var newSelectorLeft = parsedLeftThumb[0]+'-'+newIdLeft;
         var newSelectorMiddle = parsedMiddleThumb[0]+'-'+newIdMiddle;
         var newSelectorRight = parsedRightThumb[0]+'-'+newIdRight;

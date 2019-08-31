@@ -80,6 +80,7 @@ header nav a:hover {
     grid-area: intro;
 }
 #intro h2 {
+    padding-bottom: 15px;
     border-bottom: 1px solid #ffc045;
 }
 #photo-of-me {
@@ -298,12 +299,20 @@ header nav a:hover {
         grid-template-columns: 1fr;
         grid-template-areas: 
         "title"
-        "img-left"
-        "img-middle"
-        "img-right";
+        "img-left";
+    }
+    #project-grid h3 {
+        padding-left:0;
     }
     #project-grid div {
-        margin:0 15px;
+        margin:0 5px;
+    }
+
+    #thumb-container-middle {
+        display:none;
+    }
+    #thumb-container-right {
+        display:none;
     }
     #contact-me {
         grid-template-columns: 1fr 1fr 1fr;
@@ -377,5 +386,8 @@ header nav a:hover {
     /* Style the active link (or home/logo) */
     .active {
         color: white;
+    }
+    #myLinks  {
+        padding-left: 0 !important;
     }
 }
