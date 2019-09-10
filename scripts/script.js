@@ -4,12 +4,6 @@
 ; Date:   09 September 2019
 ; Description: JS file for personal Portfolio
 ***************************************************************/
-// require and display my header
-const header = require('../../leadley-header.js');
-var outputHeader = header.display("Kurt","Leadley","KurtLeadley Portfolio");
-console.log(outputHeader);
-console.log('');
-
 $(function() {
     console.log( "ready!" );
     // show hide and highlight work experience sections
