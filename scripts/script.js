@@ -1,3 +1,15 @@
+/***********************************
+; Title:  KurtLeadley Portfolio
+; Author: Kurt Leadley
+; Date:   09 September 2019
+; Description: JS file for personal Portfolio
+***************************************************************/
+// require and display my header
+const header = require('../../leadley-header.js');
+var outputHeader = header.display("Kurt","Leadley","KurtLeadley Portfolio");
+console.log(outputHeader);
+console.log('');
+
 $(function() {
     console.log( "ready!" );
     // show hide and highlight work experience sections
@@ -18,6 +30,7 @@ $(function() {
     });
     // we'll make this object global, just so it isn't re-instantiated 
     // on every hover event
+    // these objects are each of my portfolio projects with title, description, link and image values
     var thumbObject = {
         'thumbnail-1': {
             title:'BioSite',
@@ -56,6 +69,7 @@ $(function() {
             image:'images/portfolio-proto.JPG'
         }
     }
+    // on hover, show the text for the project, include a clickable link
     $('#project-grid > div').hover(function(){
         var id = $(this).children('div').attr('id');
         var image = thumbObject[id].image;
@@ -63,6 +77,7 @@ $(function() {
         $('#'+id).append("<p class='thumb-text'><a href='"+thumbObject[id].link+"'>"+thumbObject[id].title+"</a></p>");
         $('#'+id).append("<p class='thumb-text'><a href='"+thumbObject[id].link+"'>"+thumbObject[id].desc+"</a></p>");
     },
+    // clear thumbnail html 
     function () {
         $('#thumbnail-1').html('');
         $('#thumbnail-2').html('');
@@ -72,11 +87,12 @@ $(function() {
         $('#thumbnail-6').html('');           
     });
 
+    // when clicking the left arrow, change the thumb ids to scroll the thumbs left
     $('#left-arrow').click(function(){
         var leftThumb = $('#project-grid div:nth-of-type(1) div').attr('id');
         var middleThumb = $('#project-grid div:nth-of-type(2) div').attr('id');
         var rightThumb = $('#project-grid div:nth-of-type(3) div').attr('id');
-        
+        // determine new thumb id for the left div
         if (leftThumb) {
             var parsedLeftThumb = leftThumb.split('-');
             var newIdLeft = parseInt(parsedLeftThumb[1])-1;
@@ -84,7 +100,7 @@ $(function() {
                 newIdLeft = 6;
             }
         }
-
+        // determine new thumb id for the middle div
         if (middleThumb) {
             var parsedMiddleThumb = middleThumb.split('-');
             var newIdMiddle = parseInt(parsedMiddleThumb[1])-1;
@@ -92,6 +108,7 @@ $(function() {
                 newIdMiddle = 6;
             }
         }
+        // determine new thumb id for the right div
         if (rightThumb) {
             var parsedRightThumb = rightThumb.split('-');
             var newIdRight = parseInt(parsedRightThumb[1])-1;
@@ -99,7 +116,7 @@ $(function() {
                 newIdRight = 6;
             }
         }
-
+        // create our selector id and apply to left middle and right divs
         var newSelectorLeft = parsedLeftThumb[0]+'-'+newIdLeft;
         var newSelectorMiddle = parsedMiddleThumb[0]+'-'+newIdMiddle;
         var newSelectorRight = parsedRightThumb[0]+'-'+newIdRight;
@@ -107,7 +124,7 @@ $(function() {
         $('#project-grid div:nth-of-type(2) div').attr('id',newSelectorMiddle);
         $('#project-grid div:nth-of-type(3) div').attr('id',newSelectorRight);
     });
-
+    // repeat same logic for the right button as the right, but the ids go in the other direction (add instead of subtract)
     $('#right-arrow').click(function(){
         var leftThumb = $('#project-grid div:nth-of-type(1) div').attr('id');
         var middleThumb = $('#project-grid div:nth-of-type(2) div').attr('id');
@@ -127,7 +144,6 @@ $(function() {
         if (newIdRight == 7 ) {
             newIdRight = 1;
         }
-        console.log(newIdRight);
         var newSelectorLeft = parsedLeftThumb[0]+'-'+newIdLeft;
         var newSelectorMiddle = parsedMiddleThumb[0]+'-'+newIdMiddle;
         var newSelectorRight = parsedRightThumb[0]+'-'+newIdRight;
