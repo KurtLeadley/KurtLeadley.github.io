@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Kurt Leadley, Web Developer">
+        <meta name="author" content="Kurt Leadley">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Kurt Leadley | Web Developer</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../styles/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="../scripts/script.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="topnav">
+                <figure>
+                    <img src="../images/logo-3.png" alt="Kurt Leadley Logo">
+                </figure>
+                <!-- Navigation links (hidden by default on mobile) -->
+                <ul id="myLinks">
+                    <li>01.<a href="../index.html#about">About</a></li>
+                    <li>02.<a href="../index.html#work-experience">Experience</a></li>
+                    <li>03.<a href="../index.html#project-grid">Projects</a></li>
+                    <li>04.<a href="../index.html#contact-me">Contact</a></li>
+                    <li>05.<a href="web-335/leadley-diagrams.html">Diagrams</a></li>
+                </ul>
+                <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                <a id='burger-menu' href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+        </header>
+        <main>
+            <!-- https://www.w3schools.com/bootstrap/bootstrap_carousel.asp -->
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                </ol>             
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <a href="../nosql-data-diagrams/1.4.JPG"><img src="../nosql-data-diagrams/1.4.JPG" alt=""></a>
+                  </div>
+              
+                  <div class="item">
+                    <a href="../nosql-data-diagrams/1.4.b.PNG"><img src="../nosql-data-diagrams/1.4.b.PNG" alt=""></a>
+                  </div>
+                </div>
+              
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>    
+        </main>
+        <footer id="contact-me">
+            <div id="footer-left">
+                <h3>Contact Me:</h3>
+                <p>Feel free to drop me a message @ one of these emails</p>
+                <p class='orange-text small'><a href='mailto:leadleyk@adgcommunications.com'>leadleyk@adgcommunications.com</a></p>
+                <p class='orange-text small'><a href='mailto:kleadley@my365.bellevue.edu'>kleadley@my365.bellevue.edu</a></p>
+            </div>
+            <div id="footer-middle">
+                <h3>Links:</h3>
+                <p><a href='https://github.com/KurtLeadley'>GitHub</a></p>
+                <p><a href='https://adgcommunications.com'>ADG Communications</a></p>
+                <p><a href='http://sjsharktank.com'>SJSharkTank</a></p>
+            </div>
+            <div id="footer-right">
+                <img src="../images/logo-3.png" alt="Kurt Leadley Logo">
+            </div>
+        </footer>
+    </body>
+</html>
