@@ -68,6 +68,27 @@ header nav a {
 header nav a:hover {
     color:#ffc045;
 }
+/* nested navigation 
+https://stackoverflow.com/questions/40956571/how-to-make-a-nested-sub-menu-on-horizontal-navigation-bar-vertical
+*/
+header nav ul li ul {
+    display:none;
+    position: absolute;
+    width:inherit;
+    text-align:left;
+    padding-left:0;
+}
+header nav ul li:hover ul {
+    display:block;
+    background-color: #102d43;
+}
+header nav ul li ul li {
+    display:block;
+    float:none !important;
+    height:auto;
+    line-height:26px;
+}
+/*end of nested nav*/
 /* intro grid section */
 #intro-grid {
     display:grid;
@@ -232,6 +253,9 @@ header nav a:hover {
 #project-grid div a:hover {
     text-align: center;
     color:#9dd3dd;
+}
+.video-section {
+    margin:15px 15% 15px 15%;
 }
 /* Contact Me area */
 #clear-thumbs {
