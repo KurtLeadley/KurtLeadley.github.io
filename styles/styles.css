@@ -283,7 +283,37 @@ header nav ul li ul li {
 #contact-me a:hover {
     color:#ffff;
 }
-
+/* Carousel Bootstrap Overrides */
+#myCarousel {
+    margin: 10px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ffc045;
+}
+.carousel-inner {
+   height:500px;
+}
+/* Remove gradient from bootstrap
+https://stackoverflow.com/questions/20746461/how-do-you-remove-the-default-bootstrap-3-carousel-control-background-gradients
+*/
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}
+.carousel-inner a {
+    padding:0;
+}
+.carousel-inner img {
+    /* width:100%;
+    object-fit: contain;
+    object-fit: fill; */
+}
+.carousel-indicators li {
+    border: 1px solid  #ffc045;
+    background-color: #ffc045;
+}
+.carousel-indicators .active {
+    background-color: #9dd3dd;
+    border: 1px solid #9dd3dd;
+}
 @media (max-width: 767px) {
     section, .across {
         margin:0 2%;

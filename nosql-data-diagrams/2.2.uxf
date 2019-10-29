@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>150</x>
+      <y>160</y>
+      <w>210</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Customer
+--
+_id: 1
+first_name: "Miles"
+last_name: "Horton"
+date_of_birth: "01-12-1930"
+user_name: "TimHorton"</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>760</x>
+      <y>160</y>
+      <w>210</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Invoice
+--
+id: 1001001
+date_created: "04-01-1976"
+date_shipped: "04-02-1976"
+subtotal: 9.99
+tax: .07
+total: 10.69</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>760</x>
+      <y>360</y>
+      <w>210</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Line Item
+--
+id: 1
+name: "2112"
+price: 9.99
+quantity: 1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>150</x>
+      <y>360</y>
+      <w>210</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Invoice
+--
+id: 1001001
+date_created: "04-01-1976"
+date_shipped: "04-02-1976"
+subtotal: 9.99
+tax: .07
+total: 10.69</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>420</y>
+      <w>430</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>An invoice can have many line items (1.*) &gt;
+&lt; Many line items can belong to an invoice (*.1)
+m1=1.*
+m2=*.1</panel_attributes>
+    <additional_attributes>10.0;20.0;410.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>210</y>
+      <w>430</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>A Customer can have many Invoices (1.*) &gt;
+&lt; Many Invoices can belong to a Customer (*.1) 
+m1=1.*
+m2=*.1</panel_attributes>
+    <additional_attributes>10.0;20.0;410.0;20.0</additional_attributes>
+  </element>
+</diagram>
