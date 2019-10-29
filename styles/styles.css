@@ -301,11 +301,6 @@ https://stackoverflow.com/questions/20746461/how-do-you-remove-the-default-boots
 .carousel-inner a {
     padding:0;
 }
-.carousel-inner img {
-    /* width:100%;
-    object-fit: contain;
-    object-fit: fill; */
-}
 .carousel-indicators li {
     border: 1px solid  #ffc045;
     background-color: #ffc045;
