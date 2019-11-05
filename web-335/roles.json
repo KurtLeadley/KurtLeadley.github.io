@@ -1,0 +1,23 @@
+{
+    "_id" : 1,
+    "first_name" : "Joe",
+    "last_name" : "Thornton",
+    "permission" : "admin",
+    "roles" : [
+        {
+            "role_name" : "Content Manager",
+            "allowed_permissions" : ["editor","admin","super_user"],
+            "active_role" : true
+        },
+        {
+            "role_name" : "Database Administrator",
+            "allowed_permissions" : ["admin","super_user"],
+            "active_role" : true  
+        },
+        {
+            "role_name" : "Super User",
+            "allowed_permissions" : ["super_user"],
+            "active_role" : false
+        }
+    ]   
+}
