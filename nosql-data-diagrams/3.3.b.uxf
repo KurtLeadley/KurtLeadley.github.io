@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>800</x>
+      <y>350</y>
+      <w>250</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Publisher
+--
+{
+"publisher_code" : 1,
+"publisher_name" : "MyPubCo",
+"publisher_address" : "Anytown America"
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>800</x>
+      <y>150</y>
+      <w>250</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Books
+--
+{
+	"book_isbn" : "123456",
+	"book_name" : "How to Normalize",
+	"book_price" : 10.99
+},
+{
+	"book_isbn" : "abcdefg",
+	"book_name" : "How to NoSQL",
+	"book_price" : 10.99
+}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>150</x>
+      <y>150</y>
+      <w>330</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Author
+--
+{
+	"author_first_name" : "Bob",
+	"author_last_name" : "Mitchellsonberg",
+	"author_phone" : "123-456-7890",
+	"author_email" : "k.mitchellsonberg@mypubco.com"
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>470</x>
+      <y>210</y>
+      <w>350</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= *.*</panel_attributes>
+    <additional_attributes>330.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>330</y>
+      <w>250</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Books
+--
+{
+	"book_isbn" : "123456",
+	"book_name" : "How to Normalize",
+	"book_price" : 10.99
+},
+{
+	"book_isbn" : "abcdefg",
+	"book_name" : "How to NoSQL",
+	"book_price" : 10.99
+}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>470</x>
+      <y>400</y>
+      <w>340</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1.*</panel_attributes>
+    <additional_attributes>10.0;10.0;320.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>150</x>
+      <y>60</y>
+      <w>330</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>An AUTHOR can write many BOOKS
+A BOOK can have many AUTHORS
+A PUBLISHER can publish many BOOKS
+A BOOK has one PUBLISHER</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

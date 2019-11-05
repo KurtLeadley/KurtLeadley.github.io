@@ -1,0 +1,30 @@
+{
+    "author_first_name" : "Bob",
+    "author_last_name" : "Mitchellsonberg",
+    "author_phone" : "123-456-7890",
+    "author_email" : "k.mitchellsonberg@mypubco.com",
+    "books" : [
+        {
+            "book_isbn" : "123456",
+            "book_name" : "How to Normalize",
+            "book_price" : 10.99,
+            "publisher" : 
+                {
+                    "publisher_code" : 1,
+                    "publisher_name" : "MyPubCo",
+                    "publisher_address" : "Anytown America"
+                }
+        },
+        {
+            "book_isbn" : "abcdefg",
+            "book_name" : "How to NoSQL",
+            "book_price" : 10.99,
+            "publisher" : 
+                {
+                    "publisher_code" : 1,
+                    "publisher_name" : "MyPubCo",
+                    "publisher_address" : "Anytown America"
+                }
+        }
+    ]   
+}
