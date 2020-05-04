@@ -27,36 +27,48 @@ $(function() {
     // these objects are each of my portfolio projects with title, description, link and image values
     var thumbObject = {
         'thumbnail-1': {
-            title:'BioSite',
-            desc:'A website dedicated to my Grandfather',
-            link:'https://kurtleadley.github.io/bioSite/',
-            image:'images/snowy-mtn-summer.png'
+            title:'BCRS',
+            desc:'MEAN Stack Bellevue University Group Project',
+            link:'https://bcrs-group-4.herokuapp.com/#/',
+            image:'images/bcrs.png'
         },
         'thumbnail-2': {
+            title:'NodeBucket',
+            desc:'MEAN Stack Bellevue University Project',
+            link:'http://leadley-nodebucket.us-east-1.elasticbeanstalk.com/',
+            image:'images/nodebucket.png'
+        },
+        'thumbnail-3': {
             title:'SJST',
             desc:'San Jose Sharks stats and forum',
             link:'http://sjsharktank.com',
             image:'images/sjst-logo.png'
         },
-        'thumbnail-3': {
+        'thumbnail-4': {
+            title:'BioSite',
+            desc:'A website dedicated to my Grandfather',
+            link:'https://kurtleadley.github.io/bioSite/',
+            image:'images/snowy-mtn-summer.png'
+        },
+        'thumbnail-5': {
             title:'Web-330',
             desc:'GitHub for my JavaScript Design Patterns class',
             link:'https://github.com/KurtLeadley/web-330',
             image:'images/dinah-cat.jpg'
         },
-        'thumbnail-4': {
+        'thumbnail-6': {
             title:'Web-231',
             desc:'GitHub for my JavaScript 231 class',
             link:'https://github.com/KurtLeadley/web-231',
             image:'images/jscode.jpg'
         },
-        'thumbnail-5': {
+        'thumbnail-7': {
             title:'BioSite Prototype',
             desc:'Prototype for the website dedicated to my grandfather',
             link:'images/bio-site-prototype.jpg',
             image:'images/football-xs-and-os.jpg'
         },
-        'thumbnail-6': {
+        'thumbnail-8': {
             title:'Portfolio Prototype',
             desc:'Prototype for this portfolio site',
             link:'images/leadley-assignment-2.4-wireframe.pdf',
@@ -67,6 +79,7 @@ $(function() {
     $('#project-grid > div').hover(function(){
         var id = $(this).children('div').attr('id');
         var image = thumbObject[id].image;
+        console.log(image);
         var imageLink = "url("+image+")";
         $('#'+id).append("<p class='thumb-text'><a href='"+thumbObject[id].link+"'>"+thumbObject[id].title+"</a></p>");
         $('#'+id).append("<p class='thumb-text'><a href='"+thumbObject[id].link+"'>"+thumbObject[id].desc+"</a></p>");
@@ -78,7 +91,9 @@ $(function() {
         $('#thumbnail-3').html('');
         $('#thumbnail-4').html('');
         $('#thumbnail-5').html('');
-        $('#thumbnail-6').html('');           
+        $('#thumbnail-6').html(''); 
+        $('#thumbnail-7').html('');  
+        $('#thumbnail-8').html('');            
     });
 
     // when clicking the left arrow, change the thumb ids to scroll the thumbs left
@@ -91,7 +106,7 @@ $(function() {
             var parsedLeftThumb = leftThumb.split('-');
             var newIdLeft = parseInt(parsedLeftThumb[1])-1;
             if (newIdLeft == 0 ) {
-                newIdLeft = 6;
+                newIdLeft = 8;
             }
         }
         // determine new thumb id for the middle div
@@ -99,7 +114,7 @@ $(function() {
             var parsedMiddleThumb = middleThumb.split('-');
             var newIdMiddle = parseInt(parsedMiddleThumb[1])-1;
             if (newIdMiddle == 0 ) {
-                newIdMiddle = 6;
+                newIdMiddle = 8;
             }
         }
         // determine new thumb id for the right div
@@ -107,7 +122,7 @@ $(function() {
             var parsedRightThumb = rightThumb.split('-');
             var newIdRight = parseInt(parsedRightThumb[1])-1;
             if (newIdRight == 0 ) {
-                newIdRight = 6;
+                newIdRight = 8;
             }
         }
         // create our selector id and apply to left middle and right divs
@@ -129,13 +144,13 @@ $(function() {
         var newIdLeft = parseInt(parsedLeftThumb[1])+1;
         var newIdMiddle = parseInt(parsedMiddleThumb[1])+1;
         var newIdRight = parseInt(parsedRightThumb[1])+1;
-        if (newIdLeft == 7 ) {
+        if (newIdLeft == 9 ) {
             newIdLeft = 1;
         }
-        if (newIdMiddle == 7 ) {
+        if (newIdMiddle == 9 ) {
             newIdMiddle = 1;
         }
-        if (newIdRight == 7 ) {
+        if (newIdRight == 9 ) {
             newIdRight = 1;
         }
         var newSelectorLeft = parsedLeftThumb[0]+'-'+newIdLeft;

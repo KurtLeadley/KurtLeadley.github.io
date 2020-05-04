@@ -211,7 +211,8 @@ header nav ul li ul li {
     margin:0 15px 0 7.5px;
 }
 #thumbnail-1, #thumbnail-2, #thumbnail-3,
-#thumbnail-4, #thumbnail-5, #thumbnail-6{
+#thumbnail-4, #thumbnail-5, #thumbnail-6,
+#thumbnail-7, #thumbnail-8{
     background-repeat: no-repeat; 
     border: 1px solid #ffc045;
     height:376px;
@@ -219,21 +220,27 @@ header nav ul li ul li {
     box-shadow: inset 0 0 0 1000px rgba(157, 211, 221,.25);
 }
 #thumbnail-1 {
-    background-image: url(../images/snowy-mtn-summer.png);  
+    background-image: url(../images/bcrs.png);  
 }
 #thumbnail-2 {
-    background-image: url(../images/sjst-logo.png);
+    background-image: url(../images/nodebucket.png);
 }
 #thumbnail-3 {
-    background-image: url(../images/dinah-cat.jpg);
+    background-image: url(../images/sjst-logo.png);
 }
 #thumbnail-4 {
-    background-image: url(../images/jscode.jpg);
+    background-image: url(../images/snowy-mtn-summer.png);  
 }
 #thumbnail-5 {
-    background-image: url(../images/football-xs-and-os.jpg);
+    background-image: url(../images/dinah-cat.jpg);
 }
 #thumbnail-6 {
+    background-image: url(../images/jscode.jpg);
+}
+#thumbnail-7 {
+    background-image: url(../images/football-xs-and-os.jpg);
+}
+#thumbnail-8 {
     background-image: url(../images/portfolio-proto.JPG);
 }
 .thumb-text {
