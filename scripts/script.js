@@ -26,31 +26,31 @@ $(function() {
     // on every hover event
     // these objects are each of my portfolio projects with title, description, link and image values
     var thumbObject = {
+        // 'thumbnail-1': {
+        //     title:'BCRS',
+        //     desc:'MEAN Stack Bellevue University GROUP Project',
+        //     link:'https://bcrs-group-4.herokuapp.com/#/',
+        //     image:'images/bcrs.png'
+        // },
         'thumbnail-1': {
-            title:'BCRS',
-            desc:'MEAN Stack Bellevue University GROUP Project',
-            link:'https://bcrs-group-4.herokuapp.com/#/',
-            image:'images/bcrs.png'
-        },
-        'thumbnail-2': {
             title:'NodeBucket',
             desc:'MEAN Stack Bellevue University Individual Project',
             link:'http://leadley-nodebucket.us-east-1.elasticbeanstalk.com/',
             image:'images/nodebucket.png'
         },
-        'thumbnail-3': {
+        'thumbnail-2': {
             title:'SJST',
             desc:'Hockey Stats done with LAMP stack',
             link:'http://sjsharktank.com',
             image:'images/sjst-logo.png'
         },
-        'thumbnail-4': {
+        'thumbnail-3': {
             title:'BioSite',
             desc:'A website dedicated to my Grandfather',
             link:'https://kurtleadley.github.io/bioSite/',
             image:'images/snowy-mtn-summer.png'
         },
-        'thumbnail-5': {
+        'thumbnail-4': {
             title:'Github',
             desc:'GitHub for all Bellevue Projects',
             link:'https://github.com/KurtLeadley/',
@@ -90,7 +90,7 @@ $(function() {
         $('#thumbnail-2').html('');
         $('#thumbnail-3').html('');
         $('#thumbnail-4').html('');
-        $('#thumbnail-5').html('');
+        // $('#thumbnail-5').html('');
         // $('#thumbnail-6').html(''); 
         // $('#thumbnail-7').html('');  
         // $('#thumbnail-8').html('');            
@@ -106,7 +106,7 @@ $(function() {
             var parsedLeftThumb = leftThumb.split('-');
             var newIdLeft = parseInt(parsedLeftThumb[1])-1;
             if (newIdLeft == 0 ) {
-                newIdLeft = 5;
+                newIdLeft = 4;
             }
         }
         // determine new thumb id for the middle div
@@ -114,7 +114,7 @@ $(function() {
             var parsedMiddleThumb = middleThumb.split('-');
             var newIdMiddle = parseInt(parsedMiddleThumb[1])-1;
             if (newIdMiddle == 0 ) {
-                newIdMiddle = 5;
+                newIdMiddle = 4;
             }
         }
         // determine new thumb id for the right div
@@ -122,7 +122,7 @@ $(function() {
             var parsedRightThumb = rightThumb.split('-');
             var newIdRight = parseInt(parsedRightThumb[1])-1;
             if (newIdRight == 0 ) {
-                newIdRight = 5;
+                newIdRight = 4;
             }
         }
         // create our selector id and apply to left middle and right divs
@@ -144,13 +144,13 @@ $(function() {
         var newIdLeft = parseInt(parsedLeftThumb[1])+1;
         var newIdMiddle = parseInt(parsedMiddleThumb[1])+1;
         var newIdRight = parseInt(parsedRightThumb[1])+1;
-        if (newIdLeft == 6 ) {
+        if (newIdLeft == 5 ) {
             newIdLeft = 1;
         }
-        if (newIdMiddle == 6 ) {
+        if (newIdMiddle == 5 ) {
             newIdMiddle = 1;
         }
-        if (newIdRight == 6 ) {
+        if (newIdRight == 5 ) {
             newIdRight = 1;
         }
         var newSelectorLeft = parsedLeftThumb[0]+'-'+newIdLeft;
