@@ -35,7 +35,7 @@ $(function() {
         'thumbnail-1': {
             title:'NodeBucket',
             desc:'MEAN Stack Bellevue University Individual Project',
-            link:'http://leadley-nodebucket.us-east-1.elasticbeanstalk.com/',
+            link:'http://nodebucketleadley-env.eba-3djudgbj.us-east-1.elasticbeanstalk.com/',
             image:'images/nodebucket.png'
         },
         'thumbnail-2': {
